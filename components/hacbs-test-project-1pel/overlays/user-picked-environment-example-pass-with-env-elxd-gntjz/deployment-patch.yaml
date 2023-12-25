@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project-1pel
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/nbe-e2e-zbja-tenant/integ-app-nmjn/hacbs-test-project-1pel@sha256:1796d6325212146b2219456acd19b3f77d80320c7f523f7b5dc44a62da6af922
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
